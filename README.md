@@ -1,4 +1,4 @@
-# kadm_project
+# kadam_project
 
 1. git quick start: https://proglib.io/p/git-for-half-an-hour
 
