@@ -1,1 +1,87 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T13:59:58.195Z" agent="5.0 (Windows)" etag="wIpnIPdaombqBgUXS8kl" version="14.5.1" type="github" pages="2"><diagram id="UaXXswXV7zOmUy8FDcEO" name="MAIN">1Zldc5wgFIZ/zV52RjHrbm7z0eamaWc208z0DpFVWhQHcT/663twIavBpNtJDG4uMvAioA9Hzws7i66L3ReJq/yrSCmfoSDdzaKbGUKLJYL/WtgbIQoPQiZZepA6wor9oUYMjNqwlNa9C5UQXLGqLxJRlpSonoalFNv+ZWvB+7NWOKOOsCKYu+ojS1V+UJfz4KjfUZblduYwMC0JJr8zKZrSzDdDUdD+HZoLbMcyQp3jVGw7UnQ7i66lEOpQKnbXlGu0Ftuh3+cXWp/uW9JSndIhefh1+fjjYZVe3W++/1R399nN3SczygbzhtrHiDmMd5WyDRQzXSSc4tLqMEGnaeBqGG6LFZUvdWhZqL3l3xKk+h4DaN7mTNFVhYlu3ULAgZargkMthOJalGpl+tpbp1LR3YtMwifSEMBUFFTJPVxiOlyYtdn3q9tjIIR2+fJOEMRGwyb2sqeBj/yhYJbgP5YDOctRiarhWDFRTozc1NBFp0SyokV1DnE5ucC8OImu2DFi9URamdONThnnRz0MfWOfO9gxPKHOaJBwqc4wMKmuTQnj80+Df4yxgzFhsoUnIVNNnN7SN72FQ8+GHslxSSbOD81987t0+K2FSCdGbWqvrL2BDrWClfDt4/W0yXl/XUPXRK4b+iq20Du2CHnH5hpIonc9QaKTLd1VuIX1JojvwC1e9sENOcNogNt8NG6uNSSiKPR+BTTJcMLfmCFGoDaB75tr7WoYWk+V1Epiord87jsLI7OqhspVneNKi4SLJv0YiPEziJcDEBcDEBejQXStyRonkhEXnMVVSUFoXf8b2PF451ujOKSej/kQXgTeI3M5EJmEYd2RcFzX9IzpLrzTdd1gWzxfpnPvhxPIdTycbViZ6cfigOt84cbeExVyfZGiUjIlzOBnidW7S0eubSqxaqR2AO2B2bS3Of531cg1UANHkpgQlsIj1ieeP/r0V86eKB5gPOTtx2Ps+qsO0Hc5/hmBm/8tOHIt1OuxGYx2Rj4C3zHffagefxFt2zq/Oke3fwE=</diagram><diagram id="EEE2wBSv-tUbdnP6wHZc" name="Page-2">rZTLboMwEEW/hmUkHsqjy5KSdlNVaipl7eAJuDWe1JiE5Os7BjtAu6gq1RvMGfuOmbkmSNZV+6jZsXxGDjKIQ94GyUMQx9F8FdPDkosnSdSTQgvu2AC24goOho42gkM9WWgQpRHHKcxRKcjNhDGt8TxddkA5zXpkhcsYDmCbMwk/lu0EN2VPV/PR6icQRekzR6GL7Fn+UWhslMsXxEnYjT5cMa/lQF0yjucRSrIgWWtE08+qdg3SFteXTWVs9zZ7V3f1lr+ss9dzhDDrxTZ/2XL7Qg3K/K+0a/6JyQZ8FRaSkqQHpFy2axJ1F1l8NvZLUyrTphtjtCjsMzuBvphSqKIrFzbUSqoz2E5bLcnq2uvvtd/lCR29T+pxV3Rz8Y020FpemkoSiGjKpCgUzXOqC9ApU8pvBFnj3gUqwbndnmqoxZXtO6mQ3o8olOmMN0+D+YPVagzWvbmjW3arB+03n/3ShehmDbpzgBUYfaF9TmW29MZ09222WDlwHtwbLR0rR871PmTuwhQ38aHrNHGN96+DP7vY6C+QZF8=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-03-24T14:09:35.049Z" agent="5.0 (Windows)" etag="gCRSLnyylq3ccBIYeiSu" version="14.5.1" type="github" pages="2">
+  <diagram id="UaXXswXV7zOmUy8FDcEO" name="MAIN">
+    <mxGraphModel dx="782" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-1" value="&lt;div&gt;clean&lt;/div&gt;&lt;div&gt; water&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-2" value="population" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-3" value="&lt;div&gt;temp&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-4" value="&lt;div&gt;toxic&lt;br&gt;level&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-5" value="average death age" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-6" value="birth rate" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-7" value="death chance" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="240" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-9" value="food" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-10" value="minerals" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-12" value="fuels" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-13" value="can be expanded" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="40" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-14" value="common variable" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-15" value="some abstractions" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="190" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-17" value="fabrics" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-18" value="social classes" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-19" value="values" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-22" value="living places" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-23" value="territory" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-24" value="nature levels" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-27" value="accidents chance" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bTj9WVTSdBNvPZtHNgDH-28" value="&lt;div&gt;accidents level&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xujcF7ai0WCT52VNeYVM-1" value="accidents" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="EEE2wBSv-tUbdnP6wHZc" name="Page-2">
+    <mxGraphModel dx="1582" dy="1531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="nEaWT-jn9sSdOCERw1oe-0" />
+        <mxCell id="nEaWT-jn9sSdOCERw1oe-1" parent="nEaWT-jn9sSdOCERw1oe-0" />
+        <mxCell id="nEaWT-jn9sSdOCERw1oe-2" value="&lt;font color=&quot;#FFFFFF&quot;&gt;Everything should be a class&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="nEaWT-jn9sSdOCERw1oe-1">
+          <mxGeometry x="-750" y="-680" width="170" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
