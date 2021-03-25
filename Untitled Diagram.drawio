@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T14:09:35.049Z" agent="5.0 (Windows)" etag="gCRSLnyylq3ccBIYeiSu" version="14.5.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-03-25T09:06:26.942Z" agent="5.0 (Windows)" etag="LMU-IT_PH5xkUB3aBI0P" version="14.5.1" type="github" pages="2">
   <diagram id="UaXXswXV7zOmUy8FDcEO" name="MAIN">
     <mxGraphModel dx="782" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#000000" math="0" shadow="0">
       <root>
@@ -67,19 +67,40 @@
         <mxCell id="bTj9WVTSdBNvPZtHNgDH-28" value="&lt;div&gt;accidents level&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="240" y="250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xujcF7ai0WCT52VNeYVM-1" value="accidents" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="xujcF7ai0WCT52VNeYVM-1" value="accidents" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="40" y="750" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="EEE2wBSv-tUbdnP6wHZc" name="Page-2">
-    <mxGraphModel dx="1582" dy="1531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#000000" math="0" shadow="0">
+  <diagram id="EEE2wBSv-tUbdnP6wHZc" name="CONCEPT">
+    <mxGraphModel dx="1982" dy="1531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#000000" math="0" shadow="0">
       <root>
         <mxCell id="nEaWT-jn9sSdOCERw1oe-0" />
         <mxCell id="nEaWT-jn9sSdOCERw1oe-1" parent="nEaWT-jn9sSdOCERw1oe-0" />
-        <mxCell id="nEaWT-jn9sSdOCERw1oe-2" value="&lt;font color=&quot;#FFFFFF&quot;&gt;Everything should be a class&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="nEaWT-jn9sSdOCERw1oe-1">
-          <mxGeometry x="-750" y="-680" width="170" height="20" as="geometry" />
+        <mxCell id="nEaWT-jn9sSdOCERw1oe-2" value="&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#FFFFFF&quot;&gt;Everything should be a class&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;" parent="nEaWT-jn9sSdOCERw1oe-1" vertex="1">
+          <mxGeometry x="-1045" y="-600" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LeWae98O-gbSadhrJNR8-0" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="nEaWT-jn9sSdOCERw1oe-1">
+          <mxGeometry x="-960" y="-590" width="560" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="LeWae98O-gbSadhrJNR8-1" value="" style="endArrow=none;html=1;exitX=0.31;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.625;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="nEaWT-jn9sSdOCERw1oe-1" source="LeWae98O-gbSadhrJNR8-0" target="LeWae98O-gbSadhrJNR8-0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-710" y="-420" as="sourcePoint" />
+            <mxPoint x="-660" y="-470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LeWae98O-gbSadhrJNR8-2" value="" style="endArrow=none;html=1;entryX=0.25;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.8;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="nEaWT-jn9sSdOCERw1oe-1" source="LeWae98O-gbSadhrJNR8-0" target="LeWae98O-gbSadhrJNR8-0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-810" y="-430" as="sourcePoint" />
+            <mxPoint x="-760" y="-480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LeWae98O-gbSadhrJNR8-3" value="&lt;div style=&quot;font-size: 18px&quot;&gt;&lt;font style=&quot;font-size: 18px&quot; color=&quot;#FFFFFF&quot;&gt;Playing Field&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 18px&quot;&gt;&lt;font style=&quot;font-size: 18px&quot; color=&quot;#FFFFFF&quot;&gt;Consists of several parts&lt;br&gt;Each part is Class&lt;br style=&quot;font-size: 18px&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="nEaWT-jn9sSdOCERw1oe-1">
+          <mxGeometry x="-810" y="-620" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LeWae98O-gbSadhrJNR8-4" value="&lt;font style=&quot;font-size: 14px;&quot; color=&quot;#FFFFFF&quot;&gt;The whole world has global variables calculating from all the parts&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;" vertex="1" parent="nEaWT-jn9sSdOCERw1oe-1">
+          <mxGeometry x="-870" y="-320" width="430" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
