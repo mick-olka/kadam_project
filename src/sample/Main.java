@@ -16,14 +16,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("scenes/sample.fxml"));    // !!! сюда потом menu.fxml вставить
+        //FoodMenu.setStage(primaryStage);
         Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         primaryStage.setTitle("KADAM");
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {    // действие на закрытии окна
-            @Override
-            public void handle(WindowEvent t) {
-                Platform.exit();
-                System.exit(0);
-            }
+        primaryStage.setOnCloseRequest(t -> {   //  действие на закрытии окна
+            Platform.exit();
+            System.exit(0);
         });
         primaryStage.setScene(new Scene(root, screenSize.width, screenSize.height));    // окно по размеру экрана
         primaryStage.setMaximized(true);
@@ -32,7 +30,7 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {    // mik_branch
+    public static void main(String[] args) {
         launch(args);
     }
 
