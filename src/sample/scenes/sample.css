@@ -1,0 +1,22 @@
+.root {
+    -fx-background-image: url('../res/wall_texture.png');
+    -fx-background-repeat: repeat;
+}
+
+.table {
+    -fx-background-image: url('../res/table_texture.png');
+    -fx-background-repeat: repeat;
+    -fx-border-color: black;
+}
+
+.desktop {
+    -fx-background-color: #020235;
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.screen {
+    -fx-border-color: grey;
+    -fx-border-width: 3px;
+}
