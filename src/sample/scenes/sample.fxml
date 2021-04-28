@@ -23,6 +23,11 @@
    <children>
       <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <AnchorPane fx:id="dialog">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff2b" height="214.0" layoutX="603.0" layoutY="93.0" onMouseExited="#hideFoodWindow" stroke="BLACK" strokeType="INSIDE" width="183.0" />
+               </children>
+            </AnchorPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0">
                <center>
                   <AnchorPane minHeight="600.0" minWidth="900.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="desktop" BorderPane.alignment="CENTER">
@@ -38,7 +43,7 @@
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                                    <children>
                                                       <Polygon fill="DODGERBLUE" layoutX="150.0" layoutY="175.0" points="-50.0, 40.0, 28.999969482421875, 234.0, 121.98504638671875, 49.4991455078125" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Polygon fill="DODGERBLUE" layoutX="481.0" layoutY="319.0" points="-152.0062255859375, -52.78717041015625, 50.0, 40.0, -39.3792724609375, -84.76766967773438" stroke="BLACK" strokeType="INSIDE" />
+                                                      <Polygon fill="DODGERBLUE" layoutX="481.0" layoutY="319.0" points="-142.0, -132.0, -39.3792724609375, 35.0, -39.3792724609375, -84.76766967773438" stroke="BLACK" strokeType="INSIDE" />
                                                       <Polygon fill="DODGERBLUE" layoutX="229.0" layoutY="369.0" points="-50.0, 40.0, 190.3734130859375, 14.01116943359375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
                                                    </children>
                                                 </AnchorPane>
@@ -81,6 +86,11 @@
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                               </content>
                             </Tab>
+                              <Tab text="Work">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
                           </tabs>
                         </TabPane>
                      </children>
@@ -105,18 +115,25 @@
                <top>
                   <HBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Circle fill="DODGERBLUE" layoutX="489.0" layoutY="54.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
-                        <Circle fill="DODGERBLUE" layoutX="558.0" layoutY="54.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
-                        <StackPane prefHeight="52.0" prefWidth="102.0">
+                        <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="57.0" prefWidth="191.0">
                            <children>
-                              <ImageView fx:id="food_icon" fitHeight="72.0" fitWidth="77.0" onMouseClicked="#showFoodWindow" smooth="false">
+                              <ImageView fx:id="food_icon" fitHeight="50.0" fitWidth="59.0" layoutX="18.0" layoutY="10.0" onMouseClicked="#showFoodWindow" smooth="false">
                                  <image>
-                                    <Image url="@../res/apple.png" />
+                                    <Image url="@../res/coin.png" />
                                  </image>
                               </ImageView>
+                              <Text fill="#0033ff" layoutX="77.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="100000" wrappingWidth="101.98307228088379" />
                            </children>
-                        </StackPane>
+                        </Pane>
+                        <ImageView fx:id="food_icon11" fitHeight="72.0" fitWidth="77.0" layoutX="703.0" layoutY="18.0" onMouseClicked="#showFoodWindow" smooth="false">
+                           <image>
+                              <Image url="@../res/apple.png" />
+                           </image>
+                        </ImageView>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
                   </HBox>
                </top>
                <bottom>
@@ -127,11 +144,6 @@
                   </AnchorPane>
                </bottom>
             </BorderPane>
-            <AnchorPane fx:id="dialog">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff2b" height="214.0" layoutX="603.0" layoutY="93.0" onMouseExited="#hideFoodWindow" stroke="BLACK" strokeType="INSIDE" width="183.0" />
-               </children>
-            </AnchorPane>
          </children>
       </StackPane>
    </children>
