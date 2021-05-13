@@ -1,0 +1,10 @@
+* txt,
+* reg, time, cap, eco, pop, st, workpop, pwr, war_st, wrld_st n=11
+END
+Some Action 1
+-1 4 200 3 40 3 5 0 0 0
+END
+Some Action 2
+-1 4 100 3 40 3 5 1 0 0
+END
+

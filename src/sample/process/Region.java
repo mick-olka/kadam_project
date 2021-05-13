@@ -17,8 +17,8 @@ public class Region {
 
     int military_power = 100;
 
-    byte war_status = 0;    // 0-peace 1-attacker 2-defender
-    byte world_status = 0;   // 0-neutral 1-supremacy 2-dependency
+    int war_status = 0;    // 0-peace 1-attacker 2-defender
+    int world_status = 0;   // 0-neutral 1-supremacy 2-dependency
 
     public int getPopulation() {
         return population;
@@ -53,19 +53,19 @@ public class Region {
         else System.out.println("Count Error");
     }
 
-    public byte getWar_status() {
+    public int getWar_status() {
         return war_status;
     }
-    public void setWar_status(byte war_status) {
+    public void setWar_status(int war_status) {
         if (war_status>=1&&war_status<=2) this.war_status = war_status;
         else System.out.println("Count Error");
     }
 
-    public byte getWorld_status() {
+    public int getWorld_status() {
         return world_status;
     }
 
-    public void setWorld_status(byte world_status) {
+    public void setWorld_status(int world_status) {
         if (world_status>=1&&world_status<=2) this.world_status = world_status;
         else System.out.println("Count Error");
     }
