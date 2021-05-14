@@ -1,3 +1,6 @@
+* {
+}
+
 .root {
     -fx-background-image: url('../res/wall_texture.png');
     -fx-background-repeat: repeat;
@@ -19,4 +22,11 @@
 .screen {
     -fx-border-color: grey;
     -fx-border-width: 3px;
+}
+
+.scrollPane {
+}
+
+.personPane {
+    -fx-alignment: center;
 }

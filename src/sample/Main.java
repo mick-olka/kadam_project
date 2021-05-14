@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import sample.process.ActionsPerform;
 
 import java.awt.*;
 
@@ -31,6 +32,10 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+//        ActionsPerform.readAction(1);
+//        System.out.println(ActionsPerform.tempAction.getText());
+//        System.out.println(ActionsPerform.tempAction.getPopulation());
+//        System.out.println(ActionsPerform.tempAction.getEcology());
         launch(args);
     }
 

@@ -17,7 +17,7 @@ import sample.process.Item;
 
 import java.io.IOException;
 
-public class FoodMenu {     //  это пока не нужно, как пример будет
+public class WorkMenu {     //  это пока не нужно, как пример будет
     static Stage stage;
 
 //    public static void menuInit(MenuButton foodBox) {
