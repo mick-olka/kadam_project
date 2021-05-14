@@ -32,11 +32,11 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        ActionsPerform.readAction(1);
-        System.out.println(ActionsPerform.tempAction.getText());
-        System.out.println(ActionsPerform.tempAction.getPopulation());
-        System.out.println(ActionsPerform.tempAction.getEcology());
-        //launch(args);
+//        ActionsPerform.readAction(1);
+//        System.out.println(ActionsPerform.tempAction.getText());
+//        System.out.println(ActionsPerform.tempAction.getPopulation());
+//        System.out.println(ActionsPerform.tempAction.getEcology());
+        launch(args);
     }
 
 }

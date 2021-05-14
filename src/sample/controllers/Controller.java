@@ -55,11 +55,11 @@ public class Controller {
         } else setTimer();
     }
 
-    public void showFoodWindow() {
+    public void showWorkWindow() {
         dialog.setVisible(true);
     }
 
-    public void hideFoodWindow() {
+    public void hideWorkWindow() {
         dialog.setVisible(false);
     }
 
