@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Circle?>
+<fx:root xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+         fx:id="pane"
+         layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane"
+         type="javafx.scene.layout.Pane">
+
+        <children>
+            <Circle fx:id="testCircle" fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text fx:id="taskInfo" layoutX="408.0" layoutY="33.0" text="Task Info" />
+        </children>
+
+</fx:root>
