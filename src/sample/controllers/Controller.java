@@ -1,33 +1,53 @@
 package sample.controllers;
 
 import javafx.application.Platform;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
-import sample.process.MainStep;
-import sample.process.Time;
+import javafx.scene.text.Text;
+import sample.process.*;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Controller {
 
+    public Button testBtn;
+    public VBox tasksBox;
+
     public Label timer;
     Timer tm;
     public Rectangle clock;
     public ImageView food_icon;
-    public AnchorPane dialog;   //  тест мини-окон для действий по типу покушать
+
+    public Text population;
+    public Text ecology;
+    public Text stability;
 
     boolean isTimerOn = true;
 
     public void initialize() {
         setTimer();
-        dialog.setVisible(false);   //  спрятать мини-окно
+        for (int i=0; i< TasksPerform.getTasksCount(); i++) {
+            MyPane newPane = new MyPane();
+            newPane.setId(String.valueOf(i));
+            //newPane.setOnAction(this::doAction); // set onAction property
+            newPane.setTaskInfo(TasksPerform.readTask(i));
+            tasksBox.getChildren().add(newPane);
         }
+
+        population.setText(String.valueOf(MainData.getWorldPopulation()));
+        ecology.setText(String.valueOf(MainData.getWorldEcology()));
+        stability.setText(String.valueOf(MainData.getWorldStability()));
+    }
 
     void doTickGUI() {
         timer.setText(Time.getTime());
+        population.setText(String.valueOf(MainData.getWorldPopulation()));
+        ecology.setText(String.valueOf(MainData.getWorldEcology()));
+        stability.setText(String.valueOf(MainData.getWorldStability()));
     }
 
     public void setTimer() {     //  запустить часы
@@ -55,12 +75,15 @@ public class Controller {
         } else setTimer();
     }
 
-    public void showWorkWindow() {
-        dialog.setVisible(true);
+    public void testBtnPressed() {
+        //System.out.println("test");
+        addActionPane();
     }
 
-    public void hideWorkWindow() {
-        dialog.setVisible(false);
+    public void addActionPane() {
+        MyPane newPane = new MyPane();
+        newPane.setId("actionPane");
+        tasksBox.getChildren().add(newPane);
     }
 
 }

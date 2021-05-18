@@ -5,9 +5,9 @@ import sample.Main;
 
 import java.util.Random;
 
-public class Action {
+public class Task {
 
-    public Action() {
+    public Task() {
         this.time=4;
         this.reg=-1;
         this.workable=500;
@@ -21,7 +21,7 @@ public class Action {
         this.capital=1000;
     }
 
-    public Action(int reg, int time, String txt, int cap, int eco, int pop, int st, int workpop, int pwr, byte war_st, byte wrld_st) {
+    public Task(int reg, int time, String txt, int cap, int eco, int pop, int st, int workpop, int pwr, byte war_st, byte wrld_st) {
         this.text=txt;
         this.time=time;
         this.reg=reg;
@@ -49,6 +49,7 @@ public class Action {
     private int workable;
     private int war_st;
     private int wrld_st;
+    private boolean isInstant;
 
     public String getText() {
         return text;
@@ -142,5 +143,13 @@ public class Action {
         System.out.println(text);
         System.out.println(time);
         System.out.println(capital);
+    }
+
+    public boolean isInstant() {
+        return isInstant;
+    }
+
+    public void setInstant(boolean instant) {
+        isInstant = instant;
     }
 }
