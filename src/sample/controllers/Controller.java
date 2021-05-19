@@ -8,6 +8,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import sample.process.*;
+import sample.process.TaskPackage.Task;
+import sample.process.TaskPackage.TasksPerform;
+import sample.process.panes.TaskPane;
+import sample.process.panes.TaskPerformPane;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,6 +20,8 @@ public class Controller {
 
     public Button testBtn;
     public VBox tasksBox;
+    public VBox teamBox;
+    public VBox taskPerformBox;
 
     public Label timer;
     Timer tm;
@@ -28,22 +34,20 @@ public class Controller {
 
     boolean isTimerOn = true;
 
-    public void initialize() {
+    public void initialize() {      //  здесь функции вывода инфы в GUI
+        MainData.initMainData();
         setTimer();
-        for (int i=0; i< TasksPerform.getTasksCount(); i++) {
-            MyPane newPane = new MyPane();
-            newPane.setId(String.valueOf(i));
-            //newPane.setOnAction(this::doAction); // set onAction property
-            newPane.setTaskInfo(TasksPerform.readTask(i));
-            tasksBox.getChildren().add(newPane);
-        }
+
+        Task.addTasksToGUI(tasksBox);
+        Person.addPersonsToGUI(teamBox);
+        TasksPerform.addTasksPerformToGUI(taskPerformBox);
 
         population.setText(String.valueOf(MainData.getWorldPopulation()));
         ecology.setText(String.valueOf(MainData.getWorldEcology()));
         stability.setText(String.valueOf(MainData.getWorldStability()));
     }
 
-    void doTickGUI() {
+    void doTickGUI() {      //  здесь функции обновления инфы в окне
         timer.setText(Time.getTime());
         population.setText(String.valueOf(MainData.getWorldPopulation()));
         ecology.setText(String.valueOf(MainData.getWorldEcology()));
@@ -77,13 +81,12 @@ public class Controller {
 
     public void testBtnPressed() {
         //System.out.println("test");
-        addActionPane();
+//        addActionPane();
     }
 
-    public void addActionPane() {
-        MyPane newPane = new MyPane();
-        newPane.setId("actionPane");
-        tasksBox.getChildren().add(newPane);
+    public void refreshPerformingTasks() {
+        TasksPerform.addTasksPerformToGUI(taskPerformBox);
+        System.out.println("Refreshed");
     }
 
 }

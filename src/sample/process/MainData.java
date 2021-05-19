@@ -1,7 +1,26 @@
 package sample.process;
 
+import sample.process.TaskPackage.Task;
+import sample.process.TaskPackage.TasksPerform;
+
+import java.util.ArrayList;
+
 public class MainData {
+
     public static Region[] world = {new Region("First"), new Region("Second"), new Region("Third")};
+
+    public static ArrayList<TasksPerform> chosenTasks = new ArrayList<>();
+
+    public static ArrayList<Person> myTeam = new ArrayList<>();
+
+    public static void initMainData() {     //  INIT GAME STATE FOR TESTING
+        myTeam.add(new Person(1, 2, 3, 2,3, 5000));
+        myTeam.add(new Person(5, 2, 3, 2,3, 1000));
+    }
+
+    public static void setTaskToPerform(Task task) {    //  CHOOSE TASK TO PERFORM
+        chosenTasks.add(new TasksPerform(task));
+    }
 
     public static int getWorldPopulation() {
         int population=0;

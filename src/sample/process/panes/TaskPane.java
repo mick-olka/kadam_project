@@ -1,22 +1,22 @@
-package sample.process;
+package sample.process.panes;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import sample.process.MainData;
+import sample.process.TaskPackage.Task;
+import sample.process.TaskPackage.TasksList;
+import sample.process.TaskPackage.TasksPerform;
 
 import java.io.IOException;
 
-public class MyPane extends Pane {
+public class TaskPane extends Pane {
 
-    public MyPane() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/actionPane.fxml"));
-        //FXMLLoader loader = getClass().getResource("../scenes/actionPane.fxml");
+    public TaskPane() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../scenes/taskPane.fxml"));
         loader.setRoot(this);
-        //loader.setController(new ActionPaneController());
         loader.setController(this);
 
         try {
@@ -33,15 +33,16 @@ public class MyPane extends Pane {
     @FXML
     Pane pane;
 
-    public void initialize() {
+    public void initialize() {      //  SETTING ACTIONS ON CREATION
+
         pane.setOnMouseClicked(e -> {
-            //System.out.println(this.getId());
-            TasksPerform.taskDone(Integer.parseInt(this.getId()));
+            MainData.setTaskToPerform(TasksList.taskList[(Integer.parseInt(this.getId()))]);
         });
+
     }
 
-    public void setTaskInfo(Task data) {
+    public void displayTaskInfo(Task data) {
         taskInfo.setText(data.getText());
-    }
+    }   //  DISPLAY TASK INFO
 
 }
