@@ -1,14 +1,15 @@
 * txt,
 * isInstant 1-true 0-false
-* reg, time, cap, eco, pop, st, workpop, pwr, war_st, wrld_st
-* n=11
+* reg, time, cap, eco, pop, st, workpop, pwr, war_st, wrld_st,
+* engineering_lvl_needed, biology_lvl_needed, politics_lvl_needed, social_lvl_needed
+* n=15
 END
 Some Action 1
 1
--1 4 200 3 40 3 5 0 0 0
+-1 4 200 3 40 3 5 1 0 0 0 0 0 0 0
 END
 Some Action 2
 0
--1 4 100 3 40 3 5 1 0 0
+-1 4 100 3 40 3 5 1 0 0 0 0 0 0 0
 END
 

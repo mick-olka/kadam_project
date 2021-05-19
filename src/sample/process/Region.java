@@ -1,5 +1,7 @@
 package sample.process;
 
+import sample.process.TaskPackage.Task;
+
 public class Region {
 
     public Region(String name) {

@@ -134,30 +134,9 @@
                                  <children>
                                     <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
-                                          <VBox spacing="10.0">
+                                          <VBox fx:id="teamBox" spacing="10.0">
                                              <children>
                                                 <Pane prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="Name of person" />
-                                                      <Label layoutX="294.0" layoutY="31.0" text="Task Name Performing" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="20.0" layoutY="20.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="Name of person" />
-                                                      <Label layoutX="294.0" layoutY="31.0" text="Task Name Performing" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="20.0" layoutY="20.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="Name of person" />
-                                                      <Label layoutX="294.0" layoutY="31.0" text="Task Name Performing" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="10.0" layoutY="192.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
                                                    <children>
                                                       <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
                                                       <Label layoutX="108.0" layoutY="32.0" text="Name of person" />
@@ -184,23 +163,9 @@
                                  <children>
                                     <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
-                                          <VBox fx:id="tasksBox" spacing="10.0">
+                                          <VBox fx:id="tasksBox" onMouseClicked="#refreshPerformingTasks" spacing="10.0">
                                              <children>
                                                 <Pane prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="408.0" layoutY="33.0" text="Task Info" />
-                                                      <Label layoutX="232.0" layoutY="32.0" text="Task Name" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="408.0" layoutY="33.0" text="Task Info" />
-                                                      <Label layoutX="232.0" layoutY="32.0" text="Task Name" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="10.0" layoutY="101.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
                                                    <children>
                                                       <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
                                                       <Label layoutX="408.0" layoutY="33.0" text="Task Info" />
@@ -230,24 +195,12 @@
             </AnchorPane>
          </center>
          <left>
-            <VBox alignment="CENTER" prefHeight="631.0" prefWidth="77.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="taskPerformBox" alignment="CENTER" prefHeight="631.0" prefWidth="77.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
                   <Pane>
                      <children>
                         <Circle fill="DODGERBLUE" layoutX="39.0" layoutY="45.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
                         <Text layoutX="3.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task &amp; time" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="10.0" layoutY="156.0">
-                     <children>
-                        <Circle fill="DODGERBLUE" layoutX="40.0" layoutY="44.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
-                        <Text layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task &amp; time" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="10.0" layoutY="208.0">
-                     <children>
-                        <Circle fill="DODGERBLUE" layoutX="41.0" layoutY="46.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
-                        <Text layoutX="5.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task &amp; time" />
                      </children>
                   </Pane>
                </children>

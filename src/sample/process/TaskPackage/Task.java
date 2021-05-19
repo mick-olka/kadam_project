@@ -1,7 +1,7 @@
-package sample.process;
+package sample.process.TaskPackage;
 
-import com.sun.javaws.IconUtil;
-import sample.Main;
+import javafx.scene.layout.VBox;
+import sample.process.panes.TaskPane;
 
 import java.util.Random;
 
@@ -21,20 +21,40 @@ public class Task {
         this.capital=1000;
     }
 
-    public Task(int reg, int time, String txt, int cap, int eco, int pop, int st, int workpop, int pwr, byte war_st, byte wrld_st) {
+    public Task(int reg, int time, String txt,
+                int cap, int eco, int pop, int st, int workpop, int pwr,
+                int war_st, int wrld_st,
+                int IT_lvl_needed,
+                int engineering_lvl_needed, int biology_lvl_needed,
+                int politics_lvl_needed, int social_lvl_needed, boolean isInstant) {
         this.text=txt;
         this.time=time;
         this.reg=reg;
-        this.capital=rand.nextInt(cap);
-        this.ecology=rand.nextInt(eco);
-        this.power=rand.nextInt(pwr);
-        this.population=rand.nextInt(pop);
-        this.stab = rand.nextInt(st);
-        this.workable=rand.nextInt(workpop);
+        this.capital=cap;
+        this.ecology=eco;
+        this.power=pwr;
+        this.population=pop;
+        this.stab = st;
+        this.workable=workpop;
         this.war_st=war_st;
         this.wrld_st=wrld_st;
+        this.biology_lvl_needed= (byte) biology_lvl_needed;
+        this.engineering_lvl_needed= (byte) engineering_lvl_needed;
+        this.social_lvl_needed= (byte) social_lvl_needed;
+        this.IT_lvl_needed= (byte) IT_lvl_needed;
+        this.politics_lvl_needed= (byte) politics_lvl_needed;
 
     }
+
+    public static void addTasksToGUI(VBox tasksBox) {       //  DISPLAY TASKS ON TASKS TAB
+        for (int i = 0; i< TasksList.taskList.length; i++) {
+            TaskPane newPane = new TaskPane();
+            newPane.setId(String.valueOf(i));
+            newPane.displayTaskInfo(TasksList.taskList[i]);
+            tasksBox.getChildren().add(newPane);
+        }
+    }
+
 
     Random rand = new Random();
     String text;
@@ -50,6 +70,12 @@ public class Task {
     private int war_st;
     private int wrld_st;
     private boolean isInstant;
+
+    private byte IT_lvl_needed = 0;
+    private byte biology_lvl_needed = 0;
+    private byte politics_lvl_needed = 0;
+    private byte engineering_lvl_needed = 0;
+    private byte social_lvl_needed = 0;
 
     public String getText() {
         return text;
@@ -151,5 +177,45 @@ public class Task {
 
     public void setInstant(boolean instant) {
         isInstant = instant;
+    }
+
+    public byte getIT_lvl_needed() {
+        return IT_lvl_needed;
+    }
+
+    public void setIT_lvl_needed(byte IT_lvl_needed) {
+        this.IT_lvl_needed = IT_lvl_needed;
+    }
+
+    public byte getBiology_lvl_needed() {
+        return biology_lvl_needed;
+    }
+
+    public void setBiology_lvl_needed(byte biology_lvl_needed) {
+        this.biology_lvl_needed = biology_lvl_needed;
+    }
+
+    public byte getPolitics_lvl_needed() {
+        return politics_lvl_needed;
+    }
+
+    public void setPolitics_lvl_needed(byte politics_lvl_needed) {
+        this.politics_lvl_needed = politics_lvl_needed;
+    }
+
+    public byte getEngineering_lvl_needed() {
+        return engineering_lvl_needed;
+    }
+
+    public void setEngineering_lvl_needed(byte engineering_lvl_needed) {
+        this.engineering_lvl_needed = engineering_lvl_needed;
+    }
+
+    public byte getSocial_lvl_needed() {
+        return social_lvl_needed;
+    }
+
+    public void setSocial_lvl_needed(byte social_lvl_needed) {
+        this.social_lvl_needed = social_lvl_needed;
     }
 }
