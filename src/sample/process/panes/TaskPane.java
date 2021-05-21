@@ -27,7 +27,7 @@ public class TaskPane extends Pane {
     }
 
     @FXML
-    Circle testCircle;
+    Text taskName;
     @FXML
     Text taskInfo;
     @FXML
@@ -43,6 +43,9 @@ public class TaskPane extends Pane {
 
     public void displayTaskInfo(Task data) {
         taskInfo.setText(data.getText());
+    }   //  DISPLAY TASK INFO
+    public void displayTaskName(Task data) {
+        taskInfo.setText(data.getName());
     }   //  DISPLAY TASK INFO
 
 }

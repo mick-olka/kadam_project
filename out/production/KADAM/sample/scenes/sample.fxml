@@ -195,7 +195,7 @@
             </AnchorPane>
          </center>
          <left>
-            <VBox fx:id="taskPerformBox" alignment="CENTER" prefHeight="631.0" prefWidth="77.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="taskPerformBox" alignment="CENTER" onMouseClicked="#refreshPerformingTasks" prefHeight="631.0" prefWidth="77.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
                   <Pane>
                      <children>

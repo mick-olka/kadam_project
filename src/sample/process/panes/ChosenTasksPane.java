@@ -5,14 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
-import sample.process.TaskPackage.Task;
 import sample.process.TaskPackage.TasksPerform;
 
 import java.io.IOException;
 
-public class TaskPerformPane extends Pane {
+public class ChosenTasksPane extends Pane {
 
-    public TaskPerformPane() {
+    public ChosenTasksPane() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../scenes/taskPerformPane.fxml"));
         loader.setRoot(this);
         loader.setController(this);
@@ -23,23 +22,29 @@ public class TaskPerformPane extends Pane {
             throw new RuntimeException(exception);
         }
     }
+    //int id = Integer.parseInt(this.getId());
 
     @FXML
-    Circle testCircle;
+    Circle circle;
     @FXML
     Text taskPerformText;
     @FXML
     Pane pane;
 
     public void initialize() {
-//        pane.setOnMouseClicked(e -> {
-//            System.out.println(this.getId());
-//            TasksPerform.taskDone(Integer.parseInt(this.getId()));
-//        });
+        pane.setOnMouseClicked(e -> {
+            System.out.println("activated task: "+this.getId());
+            TasksPerform.activeChosenTaskId= Integer.parseInt(this.getId());
+        });
     }
 
-    public void setTaskPerformInfo(Task data) {
-        taskPerformText.setText(data.getText());
+    public void setTaskPerformInfo(TasksPerform data) {
+        taskPerformText.setText(data.task.getName()+"\n"+data.time+" d");
+    }
+
+    public void setActiveInGUI(boolean isAxtive) {
+        if (isAxtive) circle.setStyle("-fx-fill: aquamarine");
+        else circle.setStyle("-fx-fill: #6acadb");
     }
 
 }
