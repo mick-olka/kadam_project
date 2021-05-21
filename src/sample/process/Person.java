@@ -1,6 +1,7 @@
 package sample.process;
 
 import javafx.scene.layout.VBox;
+import sample.process.panes.ChosenTasksPane;
 import sample.process.panes.PersonPane;
 
 public class Person {
@@ -10,6 +11,7 @@ public class Person {
     int engineering_lvl = 0;
     int social_lvl = 0;
     int salary = 1000;
+    public boolean isWorking = false;
 
     public Person(int it_lvl, int biology_lvl, int politics_lvl, int engineering_lvl, int social_lvl, int salary){
         this.IT_lvl=it_lvl;
@@ -24,9 +26,10 @@ public class Person {
         //
     }
 
+    static PersonPane newPane;
     public static void addPersonsToGUI(VBox tasksBox) {
         for (int i = 0; i< MainData.myTeam.size(); i++) {
-            PersonPane newPane = new PersonPane();
+            newPane = new PersonPane();
             newPane.setId(String.valueOf(i));       //  set id to pane
             Person person = MainData.myTeam.get(i);
             newPane.setPersonInfo(person);
@@ -53,5 +56,19 @@ public class Person {
     }
     public void upgrade_social_lvl() {
         this.social_lvl=+1;
+    }
+
+    public static void updateTeamPaneInGUI(VBox tasksBox) {    //  SHOW CHOSEN TASKS ON PANEL
+        tasksBox.getChildren().clear();
+        for (int i = 0; i< MainData.myTeam.size(); i++) {
+            PersonPane newPane = new PersonPane();
+            Person person = MainData.myTeam.get(i);
+            newPane.setId(String.valueOf(i));
+            newPane.setPersonInfo(person);
+            tasksBox.getChildren().add(newPane);
+            if (person.isWorking) {
+                newPane.setStyle("-fx-background-color: red");
+            } else newPane.setStyle("-fx-background-color: #37a5d0");
+        }
     }
 }

@@ -3,7 +3,7 @@ package sample.process.TaskPackage;
 import javafx.scene.layout.VBox;
 import sample.process.MainData;
 import sample.process.Person;
-import sample.process.panes.TaskPerformPane;
+import sample.process.panes.ChosenTasksPane;
 
 //*************************//
 //  CLASS TO PROCESS TASKS //
@@ -11,60 +11,80 @@ import sample.process.panes.TaskPerformPane;
 
 public class TasksPerform {
 
-    Task task;
-    int time;
+    public Task task;
+    public int time;
     Person worker = null;
+
+    public static int activeChosenTaskId=0;
+
     public TasksPerform(Task task) {
         this.task=task;
         this.time=this.task.getTime();
     }
 
     public void setWorker(Person worker) {
-        this.worker=worker;
+        if (this.worker==null) {
+            if (!worker.isWorking) {
+                this.worker = worker;
+                worker.isWorking = true;
+            }
+        }
     }
-
 
     public static void countWorkDay() {
         TasksPerform performing_task;
         for (int i = 0; i< MainData.chosenTasks.size(); i++) {
             performing_task=MainData.chosenTasks.get(i);
-            if (MainData.chosenTasks.get(i).worker != null) {
+            if (MainData.chosenTasks.get(i).worker != null) {   //  IF HAS WORKER -- COUNT TIME TO COMPLETION
                 performing_task.time--;
             }
             if (performing_task.time == 0) {
-                performing_task.taskDone();
+                performing_task.taskDone(); //  TASK DONE
             }
         }
     }
 
     //===================================
 
-    public static void addTasksPerformToGUI(VBox tasksBox) {    //  SHOW CHOSEN TASKS ON PANEL
+    public static void updateTasksPerformInGUI(VBox tasksBox) {    //  SHOW CHOSEN TASKS ON PANEL
         tasksBox.getChildren().clear();
         for (int i = 0; i< MainData.chosenTasks.size(); i++) {
-            TaskPerformPane newPane = new TaskPerformPane();
+            TasksPerform tp = MainData.chosenTasks.get(i);
+            ChosenTasksPane newPane = new ChosenTasksPane();
             newPane.setId(String.valueOf(i));
-            newPane.setTaskPerformInfo(MainData.chosenTasks.get(i).task);
+            newPane.setTaskPerformInfo(tp);
             tasksBox.getChildren().add(newPane);
+            System.out.println(TasksPerform.activeChosenTaskId==i);
+            newPane.setActiveInGUI(TasksPerform.activeChosenTaskId==i);
         }
     }
 
     //  *****   IMPLEMENTING TASK RESULTS   *****   //
     public void taskDone() {
+        this.worker.isWorking=false;
+        MainData.chosenTasks.remove(this);
         doTask(this.task);
+        if (!MainData.chosenTasks.isEmpty()) activeChosenTaskId=0;
     }
 
-    private static void doTask(Task ac) {
-        if (ac.getReg()==-1) {
-            for (int i = 0; i< MainData.world.length; i++) updateWorldStats(ac, i);
-        } else updateWorldStats(ac, ac.getReg());
+    private static void doTask(Task task) {
+        System.out.println("isInstant: "+task.isInstant());
+        if (task.isInstant()) {
+            if (task.getReg() == -1) {
+                for (int i = 0; i < MainData.world.length; i++) updateRegionStats(task, i);
+            } else updateRegionStats(task, task.getReg());
+        } else {
+            if (task.getReg() == -1) {
+                for (int i = 0; i < MainData.world.length; i++) updateRegionChangingStats(task, i);
+            } else updateRegionChangingStats(task, task.getReg());
+        }
     }
 
-    private static void updateWorldStats(Task ac, int reg) {
-        MainData.world[reg].updateWorldStats(ac);
+    private static void updateRegionStats(Task ac, int reg) {
+        MainData.world[reg].addRegionStats(ac);
     }
-    private static void updateWorldChangingStats(Task ac, int reg) {
-        MainData.world[reg].updateWorldChangingStats(ac);
+    private static void updateRegionChangingStats(Task ac, int reg) {
+        MainData.world[reg].addRegionChangingStats(ac);
     }
 
 }

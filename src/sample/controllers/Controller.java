@@ -10,8 +10,6 @@ import javafx.scene.text.Text;
 import sample.process.*;
 import sample.process.TaskPackage.Task;
 import sample.process.TaskPackage.TasksPerform;
-import sample.process.panes.TaskPane;
-import sample.process.panes.TaskPerformPane;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -40,7 +38,7 @@ public class Controller {
 
         Task.addTasksToGUI(tasksBox);
         Person.addPersonsToGUI(teamBox);
-        TasksPerform.addTasksPerformToGUI(taskPerformBox);
+        //TasksPerform.updateTasksPerformInGUI(taskPerformBox);
 
         population.setText(String.valueOf(MainData.getWorldPopulation()));
         ecology.setText(String.valueOf(MainData.getWorldEcology()));
@@ -52,6 +50,9 @@ public class Controller {
         population.setText(String.valueOf(MainData.getWorldPopulation()));
         ecology.setText(String.valueOf(MainData.getWorldEcology()));
         stability.setText(String.valueOf(MainData.getWorldStability()));
+        //updateWorkerGraphics();
+        TasksPerform.updateTasksPerformInGUI(taskPerformBox);
+        Person.updateTeamPaneInGUI(teamBox);
     }
 
     public void setTimer() {     //  запустить часы
@@ -64,7 +65,7 @@ public class Controller {
                     doTickGUI();    //  обновить время на часах в окне
                 });
             }
-        },1000, 1000);
+        },1000, 3000);
         isTimerOn=true;
     }
 
@@ -80,13 +81,20 @@ public class Controller {
     }
 
     public void testBtnPressed() {
-        //System.out.println("test");
-//        addActionPane();
+        teamBox.getChildren().get(1).setStyle("-fx-background-color: red");
     }
 
     public void refreshPerformingTasks() {
-        TasksPerform.addTasksPerformToGUI(taskPerformBox);
+        TasksPerform.updateTasksPerformInGUI(taskPerformBox);
         System.out.println("Refreshed");
     }
+
+//    public void updateWorkerGraphics() {
+//        for (int i=-1; i<teamBox.getChildren().lastIndexOf(new Pane()); i++) {
+//            if (MainData.myTeam.get(i).isWorking) {
+//                teamBox.getChildren().get(i).setStyle("-fx-background-color: blue");
+//            } else teamBox.getChildren().get(i).setStyle("-fx-background-color: red");
+//        }
+//    }
 
 }

@@ -8,10 +8,11 @@ import java.util.Random;
 public class Task {
 
     public Task() {
+        this.name="Task";
         this.time=4;
         this.reg=-1;
         this.workable=500;
-        this.text="Action";
+        this.text="Info";
         this.population=2000;
         this.stab=50;
         this.ecology=30;
@@ -19,9 +20,10 @@ public class Task {
         this.war_st=0;
         this.wrld_st=0;
         this.capital=1000;
+        this.isInstant=true;
     }
 
-    public Task(int reg, int time, String txt,
+    public Task(int reg, int time, String name, String txt,
                 int cap, int eco, int pop, int st, int workpop, int pwr,
                 int war_st, int wrld_st,
                 int IT_lvl_needed,
@@ -43,7 +45,8 @@ public class Task {
         this.social_lvl_needed= (byte) social_lvl_needed;
         this.IT_lvl_needed= (byte) IT_lvl_needed;
         this.politics_lvl_needed= (byte) politics_lvl_needed;
-
+        this.isInstant=isInstant;
+        this.name=name;
     }
 
     public static void addTasksToGUI(VBox tasksBox) {       //  DISPLAY TASKS ON TASKS TAB
@@ -51,6 +54,7 @@ public class Task {
             TaskPane newPane = new TaskPane();
             newPane.setId(String.valueOf(i));
             newPane.displayTaskInfo(TasksList.taskList[i]);
+            newPane.displayTaskName(TasksList.taskList[i]);
             tasksBox.getChildren().add(newPane);
         }
     }
@@ -58,6 +62,7 @@ public class Task {
 
     Random rand = new Random();
     String text;
+    String name;
 
     private int time;   // time needed to do for 1 person
     private int reg;    // -1-all 0-world[0] 1-world[1] 2-world[2]
@@ -79,6 +84,10 @@ public class Task {
 
     public String getText() {
         return text;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getCapital() {

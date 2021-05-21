@@ -140,17 +140,17 @@ public class Region {
         this.capital_change += capital_change;
     }
 
-    public void updateWorldStats(Task ac) {
-        this.add_power(ac.getPower());
-        this.add_capital(ac.getCapital());
-        this.add_ecology(ac.getEcology());
-        this.add_workable_population(ac.getWorkable());
-        this.add_stability(ac.getStab());
-        this.add_population(ac.getPopulation());
-        this.setWorld_status(ac.getWrld_st());
-        this.setWar_status(ac.getWar_st());
+    public void addRegionStats(Task task) {
+        this.add_power(task.getPower());
+        this.add_capital(task.getCapital());
+        this.add_ecology(task.getEcology());
+        this.add_workable_population(task.getWorkable());
+        this.add_stability(task.getStab());
+        this.add_population(task.getPopulation());
+        this.setWorld_status(task.getWrld_st());
+        this.setWar_status(task.getWar_st());
     }
-    public void updateWorldChangingStats(Task ac) {
+    public void addRegionChangingStats(Task ac) {
         this.add_power_change(ac.getPower());
         this.add_capital_change(ac.getCapital());
         this.add_ecology_change(ac.getEcology());
@@ -159,5 +159,15 @@ public class Region {
         this.add_population_change(ac.getPopulation());
         this.setWorld_status(ac.getWrld_st());
         this.setWar_status(ac.getWar_st());
+        System.out.println("changing stats modified");
+    }
+
+    public void updateRegionStats() {
+        this.population+=population_change;
+        this.ecology+=ecology_change;
+        this.stability+=stability_change;
+        this.capital+=capital_change;
+        this.workable_population+=work_population_change;
+        this.military_power+=power_change;
     }
 }

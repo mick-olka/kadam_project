@@ -8,7 +8,7 @@ import java.util.Scanner;
 // EXAMPLE OF READING FILE WITH DATA //
 //  UNNECESSARY FOR NOW              //
 //***********************************//
-
+/*
 public class ReadTask {
     static Task tempTask;
     public static Task readTask(int num) {    // READS Task FROM TXT AND WRITE IT IN @tempTask
@@ -68,3 +68,4 @@ public class ReadTask {
         return count;
     }
 }
+*/

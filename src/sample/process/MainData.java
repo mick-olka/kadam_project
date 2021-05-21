@@ -5,9 +5,13 @@ import sample.process.TaskPackage.TasksPerform;
 
 import java.util.ArrayList;
 
+//*******************************//
+// CLASS FOR STORING MAIN DATA   //
+//*******************************//
+
 public class MainData {
 
-    public static Region[] world = {new Region("First"), new Region("Second"), new Region("Third")};
+    public static Region[] world = {new Region("Nikolaev"), new Region("Arken"), new Region("Domok")};
 
     public static ArrayList<TasksPerform> chosenTasks = new ArrayList<>();
 
@@ -20,6 +24,12 @@ public class MainData {
 
     public static void setTaskToPerform(Task task) {    //  CHOOSE TASK TO PERFORM
         chosenTasks.add(new TasksPerform(task));
+    }
+
+    public static void updateWorldStats() {
+        for (Region region : world) {
+            region.updateRegionStats();
+        }
     }
 
     public static int getWorldPopulation() {
