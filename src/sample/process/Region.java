@@ -7,7 +7,7 @@ public class Region {
     public Region(String name) {
         this.name=name;
     }
-    String name;
+    public String name;
 
     private float population = 1000;          //
     private float workable_population = 300;  //  x 1000
