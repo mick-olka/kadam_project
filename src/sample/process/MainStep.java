@@ -9,6 +9,8 @@ public class MainStep {
         Time.tick();
         MainData.updateWorldStats();
         TasksPerform.countWorkDay();
+        MainData.player.paySalary();
+        MainData.player.getIncome();
     }
 
 

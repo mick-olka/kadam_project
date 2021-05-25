@@ -3,6 +3,7 @@ package sample.process.TaskPackage;
 import javafx.scene.layout.VBox;
 import sample.process.MainData;
 import sample.process.Person;
+import sample.process.Player;
 import sample.process.panes.ChosenTasksPane;
 
 //*************************//
@@ -71,20 +72,22 @@ public class TasksPerform {
         System.out.println("isInstant: "+task.isInstant());
         if (task.isInstant()) {
             if (task.getReg() == -1) {
-                for (int i = 0; i < MainData.world.length; i++) updateRegionStats(task, i);
-            } else updateRegionStats(task, task.getReg());
+                for (int i = 0; i < MainData.world.length; i++) updateGameStats(task, i);
+            } else updateGameStats(task, task.getReg());
         } else {
             if (task.getReg() == -1) {
-                for (int i = 0; i < MainData.world.length; i++) updateRegionChangingStats(task, i);
-            } else updateRegionChangingStats(task, task.getReg());
+                for (int i = 0; i < MainData.world.length; i++) updateGameChangingStats(task, i);
+            } else updateGameChangingStats(task, task.getReg());
         }
     }
 
-    private static void updateRegionStats(Task ac, int reg) {
+    private static void updateGameStats(Task ac, int reg) {
         MainData.world[reg].addRegionStats(ac);
+        MainData.player.updatePlayerStats(ac);
     }
-    private static void updateRegionChangingStats(Task ac, int reg) {
+    private static void updateGameChangingStats(Task ac, int reg) {
         MainData.world[reg].addRegionChangingStats(ac);
+        MainData.player.updatePlayerChangingStats(ac);
     }
 
 }

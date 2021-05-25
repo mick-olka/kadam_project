@@ -1,15 +1,50 @@
 package sample.process;
 
-public class Player extends Person{
-    static long coins = 1000;
+import sample.process.TaskPackage.Task;
 
-    public static long getCoins() {
-        return coins;
+public class Player extends Person{
+    long coins = 1000;
+    int dailyIncome = 0;
+
+    public Player() {
+
     }
-    public static void setCoins(long c) {
-        if (coins>0) coins = c;
+    public Player(int it_lvl, int biology_lvl, int politics_lvl, int engineering_lvl, int social_lvl, int cash) {
+        this.IT_lvl=it_lvl;
+        this.engineering_lvl=engineering_lvl;
+        this.biology_lvl=biology_lvl;
+        this.politics_lvl=politics_lvl;
+        this.social_lvl=social_lvl;
+        this.coins=cash;
     }
-    public static void add_coins(long c) {
-        setCoins(coins+c);
+
+    public void paySalary() {
+        if (MainData.monthPassed) {
+            for (int i = 0; i < MainData.myTeam.size(); i++) {
+                this.coins -= MainData.myTeam.get(i).salary;
+            }
+        }
+    }
+
+    public void getIncome() {
+        this.coins+=this.dailyIncome;
+    }
+
+    public long getCoins() {
+        return this.coins;
+    }
+    public void setCoins(long c) {
+        if (this.coins>0) this.coins = c;
+    }
+    public void add_coins(long c) {
+        this.setCoins(this.coins+c);
+    }
+
+    public void updatePlayerStats(Task ac) {
+        this.coins+=ac.getPlayerCapital();
+    }
+
+    public void updatePlayerChangingStats(Task ac) {
+        this.dailyIncome+=ac.getPlayerCapital();
     }
 }

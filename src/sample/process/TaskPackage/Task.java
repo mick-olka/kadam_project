@@ -23,12 +23,13 @@ public class Task {
         this.isInstant=true;
     }
 
+    //  GENERAL TASK WITH ALL PARAMS
     public Task(int reg, int time, String name, String txt,
                 int cap, int eco, int pop, int st, int workpop, int pwr,
                 int war_st, int wrld_st,
                 int IT_lvl_needed,
                 int engineering_lvl_needed, int biology_lvl_needed,
-                int politics_lvl_needed, int social_lvl_needed, boolean isInstant) {
+                int politics_lvl_needed, int social_lvl_needed, int playerCapital, boolean isInstant) {
         this.text=txt;
         this.time=time;
         this.reg=reg;
@@ -47,6 +48,32 @@ public class Task {
         this.politics_lvl_needed= (byte) politics_lvl_needed;
         this.isInstant=isInstant;
         this.name=name;
+        this.playerCapital=playerCapital;
+    }
+
+    //  TASK FOR WORK
+    public Task(int time, String name, String txt, int IT_lvl_needed,
+                int engineering_lvl_needed, int biology_lvl_needed,
+                int politics_lvl_needed, int social_lvl_needed, int playerCapital, boolean isInstant) {
+        this.text=txt;
+        this.time=time;
+        this.reg=-1;
+        this.capital=0;
+        this.ecology=0;
+        this.power=0;
+        this.population=0;
+        this.stab = 0;
+        this.workable=0;
+        this.war_st=-5;
+        this.wrld_st=-5;
+        this.biology_lvl_needed= (byte) biology_lvl_needed;
+        this.engineering_lvl_needed= (byte) engineering_lvl_needed;
+        this.social_lvl_needed= (byte) social_lvl_needed;
+        this.IT_lvl_needed= (byte) IT_lvl_needed;
+        this.politics_lvl_needed= (byte) politics_lvl_needed;
+        this.isInstant=isInstant;
+        this.name=name;
+        this.playerCapital=playerCapital;
     }
 
     public static void addTasksToGUI(VBox tasksBox) {       //  DISPLAY TASKS ON TASKS TAB
@@ -59,8 +86,6 @@ public class Task {
         }
     }
 
-
-    Random rand = new Random();
     String text;
     String name;
 
@@ -74,6 +99,7 @@ public class Task {
     private int workable;
     private int war_st;
     private int wrld_st;
+    private int playerCapital;
     private boolean isInstant;
 
     private byte IT_lvl_needed = 0;
@@ -85,47 +111,36 @@ public class Task {
     public String getText() {
         return text;
     }
-
     public String getName() {
         return name;
     }
-
     public int getCapital() {
         return capital;
     }
-
     public int getPopulation() {
         return population;
     }
-
     public int getEcology() {
         return ecology;
     }
-
     public int getWar_st() {
         return war_st;
     }
-
     public int getPower() {
         return power;
     }
-
     public int getReg() {
         return reg;
     }
-
     public int getWrld_st() {
         return wrld_st;
     }
-
     public int getStab() {
         return stab;
     }
-
     public int getTime() {
         return time;
     }
-
     public int getWorkable() {
         return workable;
     }
@@ -133,47 +148,36 @@ public class Task {
     public void setText(String text) {
         this.text = text;
     }
-
     public void setEcology(int ecology) {
         this.ecology = ecology;
     }
-
     public void setPower(int power) {
         this.power = power;
     }
-
     public void setCapital(int capital) {
         this.capital = capital;
     }
-
     public void setPopulation(int population) {
         this.population = population;
     }
-
     public void setReg(int reg) {
         this.reg = reg;
     }
-
     public void setStab(int stab) {
         this.stab = stab;
     }
-
     public void setTime(int time) {
         this.time = time;
     }
-
     public void setWar_st(int war_st) {
         this.war_st = war_st;
     }
-
     public void setWorkable(int workable) {
         this.workable = workable;
     }
-
     public void setWrld_st(int wrld_st) {
         this.wrld_st = wrld_st;
     }
-
     public void showAction() {
         System.out.println(text);
         System.out.println(time);
@@ -183,48 +187,43 @@ public class Task {
     public boolean isInstant() {
         return isInstant;
     }
-
     public void setInstant(boolean instant) {
         isInstant = instant;
     }
-
     public byte getIT_lvl_needed() {
         return IT_lvl_needed;
     }
-
     public void setIT_lvl_needed(byte IT_lvl_needed) {
         this.IT_lvl_needed = IT_lvl_needed;
     }
-
     public byte getBiology_lvl_needed() {
         return biology_lvl_needed;
     }
-
     public void setBiology_lvl_needed(byte biology_lvl_needed) {
         this.biology_lvl_needed = biology_lvl_needed;
     }
-
     public byte getPolitics_lvl_needed() {
         return politics_lvl_needed;
     }
-
     public void setPolitics_lvl_needed(byte politics_lvl_needed) {
         this.politics_lvl_needed = politics_lvl_needed;
     }
-
     public byte getEngineering_lvl_needed() {
         return engineering_lvl_needed;
     }
-
     public void setEngineering_lvl_needed(byte engineering_lvl_needed) {
         this.engineering_lvl_needed = engineering_lvl_needed;
     }
-
     public byte getSocial_lvl_needed() {
         return social_lvl_needed;
     }
-
     public void setSocial_lvl_needed(byte social_lvl_needed) {
         this.social_lvl_needed = social_lvl_needed;
+    }
+    public int getPlayerCapital() {
+        return playerCapital;
+    }
+    public void setPlayerCapital(int playerCapital) {
+        this.playerCapital = playerCapital;
     }
 }

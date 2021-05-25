@@ -4,12 +4,20 @@ import sample.process.TaskPackage.Task;
 import sample.process.TaskPackage.TasksPerform;
 
 import java.util.ArrayList;
+import java.util.Timer;
 
 //*******************************//
 // CLASS FOR STORING MAIN DATA   //
 //*******************************//
 
 public class MainData {
+
+    public static boolean monthPassed = false;
+    public static boolean isTimerOn = true;
+
+    public static Player player = new Player(5, 2, 2, 4, 3, 1000);
+
+    public static Timer tm;
 
     public static Region[] world = {new Region("Nikolaev"), new Region("Arken"), new Region("Domok")};
 
@@ -18,8 +26,9 @@ public class MainData {
     public static ArrayList<Person> myTeam = new ArrayList<>();
 
     public static void initMainData() {     //  INIT GAME STATE FOR TESTING
-        myTeam.add(new Person(1, 2, 3, 2,3, 5000));
-        myTeam.add(new Person(5, 2, 3, 2,3, 1000));
+        myTeam.add(player);
+        myTeam.add(new Person(1, 2, 3, 2,3, 50));
+        myTeam.add(new Person(5, 2, 3, 2,3, 10));
     }
 
     public static void setTaskToPerform(Task task) {    //  CHOOSE TASK TO PERFORM
