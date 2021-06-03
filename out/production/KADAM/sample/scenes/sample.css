@@ -7,9 +7,21 @@
 }
 
 .table {
-    -fx-background-image: url('../res/table_texture.png');
+    /*-fx-background-image: url('../res/table_texture.png');*/
     -fx-background-repeat: repeat;
-    -fx-border-color: black;
+
+}
+
+.clockPane {
+    /*-fx-background-image: url('../res/clock2.png');*/
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+}
+
+.borderPane {
+    -fx-background-image: url('../res/monitor+table.png');
+    -fx-background-size: 140%;
+    -fx-background-position: -220 -310;
 }
 
 .desktop {
@@ -29,4 +41,8 @@
 
 .personPane {
     -fx-alignment: center;
+}
+
+.timeText {
+    -fx-font-size: 50;
 }

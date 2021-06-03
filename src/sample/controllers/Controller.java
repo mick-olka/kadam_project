@@ -26,8 +26,8 @@ public class Controller {
     public VBox teamBox;
     public VBox taskPerformBox;
 
-    public Label timer;
-    public Rectangle clock;
+    public Text timer;
+    public Pane clock;
     public ImageView food_icon;
 
     public Text population;

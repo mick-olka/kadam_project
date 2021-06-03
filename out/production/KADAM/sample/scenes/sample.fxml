@@ -20,11 +20,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="root" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Controller">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="root" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Controller">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" styleClass="borderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <AnchorPane minHeight="600.0" minWidth="900.0" nodeOrientation="LEFT_TO_RIGHT" style="-fx-min-width: 100%;" styleClass="desktop" BorderPane.alignment="CENTER">
+            <AnchorPane minHeight="600.0" minWidth="900.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="957.0" style="-fx-min-width: 100%;" styleClass="desktop" BorderPane.alignment="CENTER">
                <children>
                   <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-min-width: 100%;" styleClass="screen" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                     <tabs>
@@ -195,6 +195,9 @@
                      </padding>
                   </TabPane>
                </children>
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin>
             </AnchorPane>
          </center>
          <left>
@@ -205,16 +208,18 @@
                         <Circle fill="DODGERBLUE" layoutX="39.0" layoutY="45.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
                         <Text layoutX="3.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task &amp; time" />
                      </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Pane>
                </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </VBox>
          </left>
          <right>
-            <Pane minWidth="70.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="597.0" prefWidth="71.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="testBtn" layoutX="8.0" layoutY="126.0" mnemonicParsing="false" onAction="#testBtnPressed" text="Button" />
-               </children>
-            </Pane>
+            <Pane minWidth="29.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="600.0" prefWidth="29.0" BorderPane.alignment="CENTER" />
          </right>
          <top>
             <HBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
@@ -222,34 +227,42 @@
                   <Insets bottom="5.0" top="5.0" />
                </padding>
                <children>
-                  <Label style="-fx-font-size: 20; -fx-label-padding: 4; -fx-background-color: white; -fx-border-color: black;" text="STABILITY" />
+                  <Label style="-fx-font-size: 20; -fx-label-padding: 4; -fx-background-color: white; -fx-border-color: black; -fx-text-fill: black;" text="STABILITY" />
                   <ProgressBar fx:id="stabilityProgressBar" prefHeight="20.0" prefWidth="916.0" progress="0.4" />
                </children>
             </HBox>
          </top>
          <bottom>
-            <AnchorPane style="-fx-background-color: #232323;" styleClass="table" BorderPane.alignment="CENTER">
-                 <Rectangle fx:id="clock" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="64.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#toggleClock" stroke="BLACK" strokeType="INSIDE" width="123.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="930.0" AnchorPane.topAnchor="5.0" />
+            <AnchorPane styleClass="table" BorderPane.alignment="CENTER">
+               <Pane fx:id="clock" layoutX="5.0" layoutY="5.0" onMouseClicked="#toggleClock" prefHeight="130.0" prefWidth="104.0" styleClass="clockPane" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="951.0" AnchorPane.topAnchor="5.0">
+                  <children>
+                     <ImageView fitHeight="151.0" fitWidth="229.0" layoutX="22.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                        <image>
+                           <Image url="@../res/clock2.png" />
+                        </image>
+                     </ImageView>
+                     <Text fx:id="timer" fill="#0cebfa" layoutX="47.0" layoutY="79.0" onMouseClicked="#toggleClock" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timeText" text="01/06" />
+                  </children>
+               </Pane>
                <Pane layoutX="931.0" layoutY="6.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                   <children>
                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="64.0" stroke="BLACK" strokeType="INSIDE" width="123.0" />
                      <Label layoutX="43.0" layoutY="23.0" text="MENU" />
                   </children>
                </Pane>
-                 <Label fx:id="timer" layoutX="52.0" layoutY="29.0" text="00:00" />
-               <Pane layoutX="269.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="57.0" prefWidth="191.0" AnchorPane.topAnchor="10.0">
+               <Pane layoutX="269.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="67.0" style="-fx-background-color: #886688;" AnchorPane.topAnchor="10.0">
                   <children>
+                     <Text fx:id="coins" fill="#0033ff" layoutX="86.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35;" text="100000" wrappingWidth="165.24073219299316" />
                      <ImageView fx:id="food_icon" fitHeight="50.0" fitWidth="59.0" layoutX="18.0" layoutY="10.0" smooth="false">
                         <image>
                            <Image url="@../res/coin.png" />
                         </image>
                      </ImageView>
-                     <Text fx:id="coins" fill="#0033ff" layoutX="77.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="100000" wrappingWidth="101.98307228088379" />
                   </children>
                </Pane>
-               <Pane layoutX="511.0" layoutY="1.0" prefHeight="79.0" prefWidth="341.0">
+               <Pane layoutX="941.0" layoutY="13.0" prefHeight="79.0" prefWidth="341.0">
                   <children>
-                     <ImageView fx:id="food_icon11" fitHeight="140.0" fitWidth="80.0" layoutX="231.0" layoutY="-30.0" onMouseClicked="#showPhoneCall" rotate="90.0" smooth="false">
+                     <ImageView fx:id="food_icon11" fitHeight="140.0" fitWidth="70.0" layoutX="231.0" layoutY="-30.0" onMouseClicked="#showPhoneCall" rotate="90.0" smooth="false">
                         <image>
                            <Image url="@../res/phone0.png" />
                         </image>
@@ -258,6 +271,9 @@
                      <Button fx:id="acceptBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#acceptBtnPressed" prefHeight="48.0" prefWidth="72.0" style="-fx-background-color: green;" text="ACCEPT" />
                   </children>
                </Pane>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
             </AnchorPane>
          </bottom>
       </BorderPane>
