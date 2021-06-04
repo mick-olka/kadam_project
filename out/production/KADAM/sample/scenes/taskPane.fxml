@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<fx:root fx:id="pane" layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="pane" layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: #2c2c4f;" styleClass="personPane" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
 
         <children>
             <Text fx:id="taskName" layoutX="511.0" layoutY="40.0" text="Task Info" />
             <Text fx:id="taskInfo" layoutX="261.0" layoutY="40.0" text="Task Info" />
+      <Pane layoutX="29.0" layoutY="1.0" prefHeight="71.0" prefWidth="81.0" style="-fx-background-image: url('../res/task0.png');">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../res/task0.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
         </children>
 
 </fx:root>

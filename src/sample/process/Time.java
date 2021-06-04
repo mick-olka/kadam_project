@@ -23,7 +23,7 @@ public class Time {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int month = calendar.get(Calendar.MONTH);
 
-        return (day+" / "+month);
+        return (day+"/"+month);
     }
 
     public static int getDay() {

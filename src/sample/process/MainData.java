@@ -15,7 +15,7 @@ public class MainData {
     public static boolean monthPassed = false;
     public static boolean isTimerOn = true;
 
-    public static Player player = new Player(5, 2, 2, 4, 3, 1000);
+    public static Player player = new Player(5, 2, 2, 4, 3, 10000);
 
     public static Timer tm;
 

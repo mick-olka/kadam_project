@@ -1,9 +1,11 @@
 * {
+
 }
 
 .root {
     -fx-background-image: url('../res/wall_texture.png');
     -fx-background-repeat: repeat;
+    -fx-font-family: Courier;
 }
 
 .table {
@@ -25,7 +27,7 @@
 }
 
 .desktop {
-    -fx-background-color: #020235;
+    -fx-background-color: grey;
     -fx-border-color: black;
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
@@ -45,4 +47,21 @@
 
 .timeText {
     -fx-font-size: 50;
+}
+
+.regionName {
+    -fx-font-size: 50;
+    -fx-text-fill: white;
+}
+
+.vBoxPane {
+
+}
+
+.widthPane {
+    -fx-min-width: 100%;
+}
+
+.coinbg {
+    -fx-background-image: url('../res/coinbg.png');
 }

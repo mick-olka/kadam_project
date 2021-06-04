@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -16,7 +17,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
@@ -24,9 +24,9 @@
    <children>
       <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" styleClass="borderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <AnchorPane minHeight="600.0" minWidth="900.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="957.0" style="-fx-min-width: 100%;" styleClass="desktop" BorderPane.alignment="CENTER">
+            <AnchorPane minHeight="600.0" minWidth="900.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="957.0" style="-fx-min-width: 100%;" BorderPane.alignment="CENTER">
                <children>
-                  <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-min-width: 100%;" styleClass="screen" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-min-width: 100%;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                     <tabs>
                       <Tab style="-fx-min-width: 100%;" text="Regions">
                         <content>
@@ -34,16 +34,44 @@
                                  <children>
                                     <SplitPane dividerPositions="0.5" layoutX="112.0" layoutY="110.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #787898;">
-                                             <children>
-                                                <Polygon fill="DODGERBLUE" layoutX="150.0" layoutY="175.0" points="-50.0, 40.0, 28.999969482421875, 234.0, 121.98504638671875, 49.4991455078125" stroke="BLACK" strokeType="INSIDE" />
-                                                <Polygon fill="DODGERBLUE" layoutX="481.0" layoutY="319.0" points="-142.0, -132.0, -39.3792724609375, 35.0, -39.3792724609375, -84.76766967773438" stroke="BLACK" strokeType="INSIDE" />
-                                                <Polygon fill="DODGERBLUE" layoutX="229.0" layoutY="369.0" points="-50.0, 40.0, 190.3734130859375, 14.01116943359375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
-                                                <Label fx:id="region0" layoutX="164.0" layoutY="271.0" text="Label" />
-                                                <Label fx:id="region1" layoutX="239.0" layoutY="350.0" text="Label" />
-                                                <Label fx:id="region2" layoutX="390.0" layoutY="240.0" text="Label" />
-                                             </children>
-                                          </AnchorPane>
+                                          <ScrollPane>
+                                             <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #787898;">
+                                                   <children>
+                                                      <Pane layoutX="116.0" layoutY="203.0">
+                                                         <children>
+                                                            <ImageView fitHeight="355.0" fitWidth="510.0" layoutX="-47.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../res/region0.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label fx:id="region0" layoutX="45.0" layoutY="113.0" styleClass="regionName" text="Label" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane layoutX="520.0" layoutY="105.0" prefHeight="184.0" prefWidth="226.0">
+                                                         <children>
+                                                            <ImageView fitHeight="288.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../res/region1.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label fx:id="region1" layoutX="90.0" layoutY="55.0" styleClass="regionName" text="Label" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane layoutX="417.0" layoutY="431.0">
+                                                         <children>
+                                                            <ImageView fitHeight="265.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../res/region2.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label fx:id="region2" layoutX="39.0" layoutY="93.0" styleClass="regionName" text="Label" />
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #545467;">
                                              <children>
                                                 <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
@@ -85,47 +113,61 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                        <Tab style="-fx-min-width: 100%;" text="News">
+                        <Tab style="-fx-min-width: 100%;" styleClass="widthPane" text="News">
                            <content>
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;">
+                              <AnchorPane style="-fx-background-color: green;" styleClass="widthPane">
                                  <children>
-                                    <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <ScrollPane style="-fx-background-color: #222222;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <content>
-                                          <VBox spacing="10.0">
+                                          <VBox prefHeight="716.0" prefWidth="1725.0" spacing="10.0" style="-fx-background-color: #222222;">
                                              <children>
-                                                <Pane prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
+                                                <Pane prefHeight="81.0" prefWidth="838.0" style="-fx-background-color: #444466;" styleClass="personPane">
                                                    <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="News Text" />
+                                                      <Pane layoutX="14.0" layoutY="8.0">
+                                                         <children>
+                                                            <ImageView fitHeight="64.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../res/news0.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Label layoutX="108.0" layoutY="32.0" />
+                                                      <Text fill="WHITE" layoutX="108.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Gave me memory card with this stuff. He said &quot;You know what to do... Save us...&quot; " />
+                                                      <Text fill="WHITE" layoutX="108.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note 0:  I've met some strange man. He was tired but tried to speak to me at all cost." />
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
+                                                <Pane layoutX="10.0" layoutY="192.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: #444466;" styleClass="personPane">
                                                    <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="News Text" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="10.0" layoutY="101.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="News Text" />
-                                                   </children>
-                                                </Pane>
-                                                <Pane layoutX="10.0" layoutY="192.0" prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="News Text" />
+                                                      <Label layoutX="108.0" layoutY="32.0" text="News:   Dead man was found in subway..." />
+                                                      <Pane layoutX="20.0" layoutY="8.0">
+                                                         <children>
+                                                            <ImageView fitHeight="64.0" fitWidth="75.0" layoutX="-7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../res/news0.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
                                                    </children>
                                                 </Pane>
                                              </children>
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>
+                                             <styleClass>
+                                                <String fx:value="vBoxPane" />
+                                                <String fx:value="widthPane" />
+                                             </styleClass>
                                           </VBox>
                                       </content>
                                        <padding>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                        </padding>
+                                       <styleClass>
+                                          <String fx:value="scrollPane" />
+                                          <String fx:value="widthPane" />
+                                       </styleClass>
                                     </ScrollPane>
                                  </children>
                               </AnchorPane>
@@ -135,18 +177,9 @@
                            <content>
                               <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;">
                                  <children>
-                                    <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #222222;" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
-                                          <VBox fx:id="teamBox" spacing="10.0">
-                                             <children>
-                                                <Pane prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="108.0" layoutY="32.0" text="Name of person" />
-                                                      <Label layoutX="294.0" layoutY="31.0" text="Task Name Performing" />
-                                                   </children>
-                                                </Pane>
-                                             </children>
+                                          <VBox fx:id="teamBox" prefHeight="714.0" prefWidth="1716.0" spacing="10.0" style="-fx-background-color: #222222;" styleClass="vBoxPane">
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>
@@ -164,18 +197,9 @@
                            <content>
                               <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;">
                                  <children>
-                                    <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #222222;" styleClass="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
-                                          <VBox fx:id="tasksBox" onMouseClicked="#refreshPerformingTasks" spacing="10.0">
-                                             <children>
-                                                <Pane prefHeight="81.0" prefWidth="859.0" style="-fx-background-color: blue;" styleClass="personPane">
-                                                   <children>
-                                                      <Circle fill="DODGERBLUE" layoutX="48.0" layoutY="42.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
-                                                      <Label layoutX="408.0" layoutY="33.0" text="Task Info" />
-                                                      <Label layoutX="232.0" layoutY="32.0" text="Task Name" />
-                                                   </children>
-                                                </Pane>
-                                             </children>
+                                          <VBox fx:id="tasksBox" onMouseClicked="#refreshPerformingTasks" prefHeight="706.0" prefWidth="1710.0" spacing="10.0" style="-fx-background-color: #222222;" styleClass="vBoxPane">
                                              <opaqueInsets>
                                                 <Insets />
                                              </opaqueInsets>
@@ -193,20 +217,28 @@
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" />
                      </padding>
+                     <styleClass>
+                        <String fx:value="screen" />
+                        <String fx:value="widthPane" />
+                     </styleClass>
                   </TabPane>
                </children>
                <BorderPane.margin>
                   <Insets left="20.0" />
                </BorderPane.margin>
+               <styleClass>
+                  <String fx:value="desktop" />
+                  <String fx:value="widthPane" />
+               </styleClass>
             </AnchorPane>
          </center>
          <left>
-            <VBox fx:id="taskPerformBox" alignment="CENTER" onMouseClicked="#refreshPerformingTasks" prefHeight="631.0" prefWidth="77.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <VBox fx:id="taskPerformBox" alignment="CENTER" onMouseClicked="#refreshPerformingTasks" prefHeight="839.0" prefWidth="94.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pane>
+                  <Pane prefHeight="76.0" prefWidth="155.0" styleClass="performTaskPane">
                      <children>
-                        <Circle fill="DODGERBLUE" layoutX="39.0" layoutY="45.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
-                        <Text layoutX="3.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task &amp; time" />
+                        <Circle fill="DODGERBLUE" layoutX="33.0" layoutY="39.0" opacity="0.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" style="-fx-scale-x: 90%; -fx-scale-y: 90%;" />
+                        <Text layoutX="3.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task&amp;time" />
                      </children>
                      <padding>
                         <Insets left="5.0" />
@@ -238,10 +270,10 @@
                   <children>
                      <ImageView fitHeight="151.0" fitWidth="229.0" layoutX="22.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" smooth="false">
                         <image>
-                           <Image url="@../res/clock2.png" />
+                           <Image url="@../res/clock3.png" />
                         </image>
                      </ImageView>
-                     <Text fx:id="timer" fill="#0cebfa" layoutX="47.0" layoutY="79.0" onMouseClicked="#toggleClock" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timeText" text="01/06" />
+                     <Text fx:id="timer" fill="#0cebfa" layoutX="48.0" layoutY="63.0" onMouseClicked="#toggleClock" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timeText" text="01/06" />
                   </children>
                </Pane>
                <Pane layoutX="931.0" layoutY="6.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
@@ -250,7 +282,7 @@
                      <Label layoutX="43.0" layoutY="23.0" text="MENU" />
                   </children>
                </Pane>
-               <Pane layoutX="269.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="67.0" style="-fx-background-color: #886688;" AnchorPane.topAnchor="10.0">
+               <Pane layoutX="269.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="67.0" prefWidth="275.0" style="-fx-background-color: #886688;" styleClass="coinbg" AnchorPane.topAnchor="10.0">
                   <children>
                      <Text fx:id="coins" fill="#0033ff" layoutX="86.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35;" text="100000" wrappingWidth="165.24073219299316" />
                      <ImageView fx:id="food_icon" fitHeight="50.0" fitWidth="59.0" layoutX="18.0" layoutY="10.0" smooth="false">
@@ -260,15 +292,15 @@
                      </ImageView>
                   </children>
                </Pane>
-               <Pane layoutX="941.0" layoutY="13.0" prefHeight="79.0" prefWidth="341.0">
+               <Pane layoutX="881.0" layoutY="5.0" prefHeight="79.0" prefWidth="341.0">
                   <children>
-                     <ImageView fx:id="food_icon11" fitHeight="140.0" fitWidth="70.0" layoutX="231.0" layoutY="-30.0" onMouseClicked="#showPhoneCall" rotate="90.0" smooth="false">
+                     <ImageView fx:id="food_icon11" fitHeight="183.0" fitWidth="91.0" layoutX="248.0" layoutY="-46.0" onMouseClicked="#showPhoneCall" rotate="90.0" smooth="false">
                         <image>
-                           <Image url="@../res/phone0.png" />
+                           <Image url="@../res/phone3.png" />
                         </image>
                      </ImageView>
-                     <Button fx:id="declineBtn" layoutX="100.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#declineBtnPressed" prefHeight="48.0" prefWidth="71.0" style="-fx-background-color: red;" text="DECLIME" />
-                     <Button fx:id="acceptBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#acceptBtnPressed" prefHeight="48.0" prefWidth="72.0" style="-fx-background-color: green;" text="ACCEPT" />
+                     <Button fx:id="declineBtn" layoutX="100.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#declineBtnPressed" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: red;" text="DECLIME" />
+                     <Button fx:id="acceptBtn" layoutX="1.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#acceptBtnPressed" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: green;" text="ACCEPT" />
                   </children>
                </Pane>
                <padding>

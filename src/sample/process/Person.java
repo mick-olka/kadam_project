@@ -68,7 +68,7 @@ public class Person {
             tasksBox.getChildren().add(newPane);
             if (person.isWorking) {
                 newPane.setStyle("-fx-background-color: red");
-            } else newPane.setStyle("-fx-background-color: #37a5d0");
+            } else newPane.setStyle("-fx-background-color: #374166");
         }
     }
 }

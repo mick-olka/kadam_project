@@ -3,7 +3,7 @@ package sample.process;
 import sample.process.TaskPackage.Task;
 
 public class Player extends Person{
-    long coins = 1000;
+    long coins = 10000;
     int dailyIncome = 0;
 
     public Player() {
