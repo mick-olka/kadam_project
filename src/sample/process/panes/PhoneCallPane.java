@@ -29,8 +29,6 @@ public class PhoneCallPane extends Pane {
     }
 
     @FXML
-    Circle testCircle;
-    @FXML
     Text personInfo;
     public Pane pane;
 

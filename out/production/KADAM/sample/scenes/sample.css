@@ -61,3 +61,7 @@
 .widthPane {
     -fx-min-width: 100%;
 }
+
+.coinbg {
+    -fx-background-image: url('../res/coinbg.png');
+}

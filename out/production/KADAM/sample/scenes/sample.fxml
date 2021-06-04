@@ -282,7 +282,7 @@
                      <Label layoutX="43.0" layoutY="23.0" text="MENU" />
                   </children>
                </Pane>
-               <Pane layoutX="269.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="67.0" style="-fx-background-color: #886688;" AnchorPane.topAnchor="10.0">
+               <Pane layoutX="269.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="67.0" prefWidth="275.0" style="-fx-background-color: #886688;" styleClass="coinbg" AnchorPane.topAnchor="10.0">
                   <children>
                      <Text fx:id="coins" fill="#0033ff" layoutX="86.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35;" text="100000" wrappingWidth="165.24073219299316" />
                      <ImageView fx:id="food_icon" fitHeight="50.0" fitWidth="59.0" layoutX="18.0" layoutY="10.0" smooth="false">
